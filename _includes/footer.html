@@ -1,5 +1,9 @@
 <footer class="site-footer">
-  <div class="container">
-    <small class="block">&copy; {{ site.time | date: '%Y' }} {{ site.author.name }} &middot; &lt;/&gt; Powered by <a href="https://jekyllrb.com/">Jekyll</a> and <a href="https://github.com/heiswayi/thinkspace">Thinkspace</a>.</small>
+  <div class="container" id="credits">
+      <table>
+        <th style="text-align: left;">&copy; {{ site.time | date: '%Y' }} <a href="mailto:{{ site.author.mail }}">{{ site.author.name }}</a></th>
+        <th style="text-align: center;">💻 Powered by <a href="https://jekyllrb.com">Jekyll</a></th>
+        <th style="text-align: right; width: 290px;">🎨 Designed by <a href="https://github.com/heiswayi/thinkspace">heiswayi</a> and <a href="https://github.com/happyzleaf/happyzleaf.github.io">happyzleaf</a></th>
+      </table>
   </div>
 </footer>

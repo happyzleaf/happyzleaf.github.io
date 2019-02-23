@@ -1,46 +1,32 @@
-# Site settings
 title_left: happyz
 title_right: leaf
+title_domain: happyzleaf.com
 description: Yup, that's me. You're probably wondering how I ended up in this situation.
-keywords: happyzleaf, portfolio
-url: https://happyzleaf.com # site url
-baseurl : "" # apply repo name like "/myproject" if used under gh-pages branch, else (under master branch) just leave empty/blank
-cover: assets/images/author.jpg # image uri like logo/cover image for site seo
+keywords: Marco Montanari, happyzleaf, portfolio
+url: https://happyzleaf.com
+baseurl: ""
+cover: /assets/images/author.jpg
 
-# google_analytics  :
-twitter_username  : happyzlife
-comments_enabled  : false # if enabled (set to true), please provide your disqus_username
-disqus_shortname  : ""
-postshare_enabled : false
+# google_analytics:
+twitter_username: happyzlife
 
-# Build settings
-permalink   : /:year/:title/
-markdown    : kramdown
-highlighter : rouge
+markdown: kramdown
+highlighter: rouge
 
-source      : ./
-destination : ./_site
+source: ./
+destination: ./_site
 
-# Sass configuration
 sass:
-  sass_dir  : assets/scss
-  style     : compressed # expanded
+  sass_dir: assets/scss
+  style: compressed # expanded
 
-# Author settings
 author:
-  name: "Marco Montanari"
+  name: Marco Montanari
+  mail: marco@montanari.cc
 
 plugins:
   - jekyll-sitemap
   - bourbon
-  - jekyll-paginate
-
-# navbar pages
-navbar:
-  - slug : about
-    title: About
-  - slug : blog
-    title: Blog
 
 exclude:
-  - ignore
+  - _ignore
