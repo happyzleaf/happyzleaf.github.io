@@ -1,32 +1,29 @@
-$color1: rgba(24, 31, 28, 1);
-$color2: rgba(39, 64, 41, 1);
-$color3: rgba(49, 92, 43, 1);
-$color4: rgba(96, 113, 47, 1);
-$color5: rgba(158, 169, 63, 1);
-
 //--------------------------------------------------------//
+// Theme
+$white: #F5F5F5;
+$gray: #CDCDCD;
 
-// Dark theme
-$dark1: #F5F5F5;
-$dark2: #CDCDCD;
-$dark3: #707070;
-$dark4: #4b4b4b;
-$dark5: #323232;
-$dark6: #212121;
+$primary-background: rgba(24, 31, 28, 1);
+$secondary-background: rgba(39, 64, 41, 1);
+// $color3: rgba(49, 92, 43, 1);
+// $color4: rgba(96, 113, 47, 1);
+// $color5: rgba(158, 169, 63, 1);
 
-$red_dark_1: rgb(254, 0, 67);
-$red_light_1: lighten($red_dark_1, 10%);
+$red: rgb(254, 0, 67);
+$red_light: lighten($red, 10%);
 
-$link-color: $red_light_1;
+$link-color: $red_light;
 
-$header-background-color: $color1;
-$code-background-color: lighten($red_dark_1, 15%);
+$header-background-color: $primary-background;
+$code-background-color: lighten($red, 15%);
 
 //--------------------------------------------------------//
 
 // Typography
-@import url('https://fonts.googleapis.com/css?family=Overpass+Mono:400,700');
-$base-font-family: 'Overpass Mono', monospace;
+//@import url('https://fonts.googleapis.com/css?family=Overpass+Mono:400,700');
+//$base-font-family: 'Overpass Mono', monospace;
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+$base-font-family: 'Noto Sans', monospace;
 $heading-font-family: $base-font-family;
 
 // Font Sizes
@@ -54,15 +51,15 @@ $medium-gray-color: #999;
 $light-gray-color: #ccc;
 
 // Font Colors
-$base-font-color: $dark1; // rgba($dark-gray-color, .8);
+$base-font-color: $white; // rgba($dark-gray-color, .8);
 
 // Border
 $base-border-color: $light-gray-color;
 $base-border: 1px solid $base-border-color;
 
 // Background Colors
-$base-background-color: $color1; // rgb(255, 0, 0); // $dark-color1;
-$secondary-background-color: $color2; // rgb(255, 0, 0); // $dark-color2;
+$base-background-color: $primary-background; // rgb(255, 0, 0); // $dark-color1;
+$secondary-background-color: $secondary-background; // rgb(255, 0, 0); // $dark-color2;
 
 // Forms
 $form-box-shadow: inset 0 1px 3px rgba($black-color, 0.06);

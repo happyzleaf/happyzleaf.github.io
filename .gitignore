@@ -1,5 +1,9 @@
+/_ignore
+
+# Jekyll
 _site
 .sass-cache
 .jekyll-metadata
 
-/_ignore
+# WebStorm
+.idea

@@ -5,7 +5,7 @@ description: Yup, that's me. You're probably wondering how I ended up in this si
 keywords: Marco Montanari, happyzleaf, portfolio
 url: https://happyzleaf.com
 baseurl: ""
-cover: /assets/images/author.jpg
+cover: /assets/images/avatar.png
 
 # google_analytics:
 twitter_username: happyzlife
@@ -30,3 +30,4 @@ plugins:
 
 exclude:
   - _ignore
+  - .idea
