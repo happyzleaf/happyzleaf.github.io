@@ -5,8 +5,8 @@
 $color1: rgba(33, 33, 33, 1);
 $color2: rgba(50, 50, 50, 1);
 $color3: rgba(252, 252, 252, 1);
-$color4: rgb(254, 35, 85);
-// I should find some use for $color5
+$color4: rgb(254, 35, 85); // rgba(239, 62, 54, 1);
+//$color5: rgba(194, 20, 32, 1); // I should find some use for this
 
 $theme-background-primary: $color1;
 $theme-background-secondary: $color2;
@@ -40,8 +40,7 @@ $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
 // Colors
-$primary-color: #000;
-$action-color: $primary-color;
+$action-color: $theme-secondary;
 
 $white-color: #fff;
 $black-color: #000;
