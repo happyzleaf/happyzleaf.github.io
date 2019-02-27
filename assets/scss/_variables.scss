@@ -1,29 +1,29 @@
-//--------------------------------------------------------//
-// Theme
-$white: #F5F5F5;
-$gray: #CDCDCD;
+// -------------------------------------------------------- //
 
-$primary-background: rgba(24, 31, 28, 1);
-$secondary-background: rgba(39, 64, 41, 1);
-// $color3: rgba(49, 92, 43, 1);
-// $color4: rgba(96, 113, 47, 1);
-// $color5: rgba(158, 169, 63, 1);
+// ----------------- Theme ----------------- //
+// Original: coolors.co/212121-323232-fcfcfc-ef3e36-c21420
+$color1: rgba(33, 33, 33, 1);
+$color2: rgba(50, 50, 50, 1);
+$color3: rgba(252, 252, 252, 1);
+$color4: rgb(254, 35, 85);
+// I should find some use for $color5
 
-$red: rgb(254, 0, 67);
-$red_light: lighten($red, 10%);
+$theme-background-primary: $color1;
+$theme-background-secondary: $color2;
+$theme-primary: $color3;
+$theme-secondary: $color4;
+// ----------------------------------------- //
 
-$link-color: $red_light;
+$link-color: $theme-secondary;
 
-$header-background-color: $primary-background;
-$code-background-color: lighten($red, 15%);
+$header-background-color: $theme-background-primary;
+$code-background-color: lighten($theme-secondary, 5%);
 
-//--------------------------------------------------------//
+// -------------------------------------------------------- //
 
 // Typography
-//@import url('https://fonts.googleapis.com/css?family=Overpass+Mono:400,700');
-//$base-font-family: 'Overpass Mono', monospace;
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
-$base-font-family: 'Noto Sans', monospace;
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans'); // @import url('https://fonts.googleapis.com/css?family=Overpass+Mono:400,700');
+$base-font-family: 'Noto Sans', monospace; // $base-font-family: 'Overpass Mono', monospace;
 $heading-font-family: $base-font-family;
 
 // Font Sizes
@@ -51,15 +51,15 @@ $medium-gray-color: #999;
 $light-gray-color: #ccc;
 
 // Font Colors
-$base-font-color: $white; // rgba($dark-gray-color, .8);
+$base-font-color: $theme-primary;
 
 // Border
 $base-border-color: $light-gray-color;
 $base-border: 1px solid $base-border-color;
 
 // Background Colors
-$base-background-color: $primary-background; // rgb(255, 0, 0); // $dark-color1;
-$secondary-background-color: $secondary-background; // rgb(255, 0, 0); // $dark-color2;
+$base-background-color: $theme-background-primary;
+$secondary-background-color: $theme-background-secondary;
 
 // Forms
 $form-box-shadow: inset 0 1px 3px rgba($black-color, 0.06);

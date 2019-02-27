@@ -111,20 +111,22 @@ hr {
   }
 
   .text {
-    //float: left;
-    //position: relative;
-    //right: 60px;
     margin: 0 0 1em 0;
     cursor: default;
     letter-spacing: 0.8px;
     font-size: 20px;
     line-height: 28px;
     font-weight: 300;
-    color: $red_light;
+    color: $link-color;
 
     span {
       font-weight: 700;
     }
+  }
+
+  @media all and (max-width: 939px) {
+    position: fixed;
+    left: 35px;
   }
 }
 
@@ -179,7 +181,7 @@ hr {
     @extend .link;
   }
 
-  #credits {
+  .container {
     font-size: rem(12);
     color: darken($base-font-color, 30%);
   }
