@@ -5,5 +5,6 @@ title: Home
 
 Things will go here.
 
-Yo I'm still building the site, f#!$ it's a lot more fun than I thought it would be.
-Anyway, a good way to check the progress is going [here](/test/).
+Right now the mobile view is still being worked on.
+
+[CREDITS](/credits) (I'll place them somewhere cool when I finish the rest.)
