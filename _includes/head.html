@@ -1,10 +1,19 @@
 <head>
-    <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/x-icon"/>
     <meta charset="utf-8">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/images/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icons/favicon-16x16.png"> <!-- Don't ask me why chrome needs the sizes inverted. -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/icons/favicon-32x32.png">
+    <link rel="shortcut icon" href="/assets/images/icons/favicon.png">
+    <link rel="manifest" href="/assets/images/icons/site.webmanifest">
+    <link rel="mask-icon" href="/assets/images/icons/safari-pinned-tab.svg" color="#212121">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/assets/images/icons/browserconfig.xml">
+    <meta name="theme-color" content="#212121">
 
     {% assign page_title = '' %}
     {% if page.title == "Home" %}
@@ -72,8 +81,6 @@
 
     <!-- Canonical link tag -->
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title_left }}{{ site.title_right }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl | prepend: site.url }}">
-    <link rel="stylesheet" href="{{ "/assets/css/menu.css" | prepend: site.baseurl | prepend: site.url }}">
 </head>
