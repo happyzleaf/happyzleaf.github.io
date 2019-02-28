@@ -16,20 +16,18 @@
     <meta name="theme-color" content="#212121">
 
     {% assign page_title = '' %}
-    {% if page.title == "Home" %}
+    {% capture page_title %}
+        /{{ site.title_left }}{{ site.title_right }}/
+    {% endcapture %}
+    {% if page.title != "Home" %}
         {% capture page_title %}
-            {{ site.title_left }}{{ site.title_right }}
-        {% endcapture %}
-    {% else %}
-        {% capture page_title %}
-            {%if page.slug == 'tag' %}Tag: {% endif %} {{ page.title }} | {{ site.title_left }}{{ site.title_right }}
+            {{ page_title }} {{ page.title }}
         {% endcapture %}
     {% endif %}
     {% capture page_title %}
         {{ page_title | strip | rstrip | lstrip | escape | strip_newlines }}
     {% endcapture %}
-
-    <title>root@{{ site.title_domain }}:~$ </title>
+    <title>{{ page_title }}</title>
 
     {% assign page_description = '' %}
     {% capture page_description %}
