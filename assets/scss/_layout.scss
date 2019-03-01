@@ -6,10 +6,17 @@
   }
 }
 
-html,
-body {
+html {
   width: 100%;
   height: 100%;
+}
+
+body {
+  min-width: 100%;
+  min-height: 100%;
+
+  overflow-x: hidden;
+  background-color: $secondary-background-color;
 }
 
 .clearfix {
@@ -25,11 +32,6 @@ body {
   }
 
   *zoom: 1;
-}
-
-body {
-  overflow-x: hidden;
-  background-color: $secondary-background-color;
 }
 
 hr {
@@ -102,7 +104,6 @@ hr {
   align-items: center;
   position: relative;
   right: 60px;
-  cursor: pointer;
 
   .avatar {
     position: relative;
@@ -172,4 +173,30 @@ hr {
 
 code {
   background-color: darken($code-background-color, 15%);
+}
+
+#back2Top {
+  width: 40px;
+  line-height: 40px;
+  overflow: hidden;
+  z-index: 999;
+  display: none;
+  cursor: pointer;
+  -moz-transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+  position: fixed;
+  bottom: 50px;
+  right: 0;
+  background-color: $theme-background-primary;
+  color: $theme-secondary;
+  text-align: center;
+  font-size: 30px;
+  text-decoration: none;
+}
+#back2Top:hover {
+  background-color: $theme-primary;
+  color: $theme-background-primary;
 }

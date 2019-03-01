@@ -29,7 +29,7 @@ plugins:
   - bourbon
 
 compress_html:
-  comments: ["<!--", "-->"]
+  comments: all # ["<!--", "-->"]
 
 exclude:
   - _ignore
