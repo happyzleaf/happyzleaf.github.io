@@ -71,7 +71,7 @@ hr {
   background-color: $header-background-color;
   border-bottom: 1px solid lighten($header-background-color, 5%);
   margin-bottom: $small-spacing;
-  min-height: 80px;
+  min-height: 87px;
 }
 
 .intro {
@@ -104,6 +104,8 @@ hr {
   .avatar {
     position: relative;
     right: 10px;
+    bottom: 2px;
+
     width: 64px;
     height: 64px;
   }

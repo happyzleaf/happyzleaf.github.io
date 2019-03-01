@@ -5,6 +5,7 @@
     float: right;
     margin: 0;
     position: relative;
+    top: 9px;
     padding: 0;
     pointer-events: all;
     cursor: pointer;
@@ -54,7 +55,7 @@
   #menuToggle {
     display: block;
     position: absolute;
-    top: 50px;
+    top: 36px;
     right: 50px;
 
     z-index: 1;
@@ -171,12 +172,12 @@
   }
 }
 
-@media screen and (max-width: 527px) {
+@media screen and (min-width: 527px) {
   .normal-menu {
-    display: none;
+    display: unset;
   }
 
   .hamburger-menu {
-    display: unset;
+    display: none;
   }
 }
