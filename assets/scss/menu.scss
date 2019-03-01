@@ -38,9 +38,6 @@
     /* make it look decent enough */
     background: #232323;
     color: #cdcdcd;
-
-    max-width: 100%;
-    overflow-x: hidden;
   }
 
   a {
@@ -146,8 +143,7 @@
     position: absolute;
     width: 300px;
     margin: -100px 0 0 0;
-    padding: 50px;
-    padding-top: 125px;
+    padding: 125px 50px 50px;
     right: -100px;
 
     background: #ededed;
@@ -175,12 +171,12 @@
   }
 }
 
-@media all and (min-width: 527px) {
+@media screen and (max-width: 527px) {
   .normal-menu {
-    display: unset;
+    display: none;
   }
 
   .hamburger-menu {
-    display: none;
+    display: unset;
   }
 }
