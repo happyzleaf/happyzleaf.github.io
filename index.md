@@ -39,7 +39,7 @@ Apart from those, I also worked full-time for [PixelSpark](https://www.thedestin
 
 <br>
 # Public Works
-I have many public projects, many of them have made thousands of downloads between server owners. You can found them in my [GitHub profile](https://github.com/happyzleaf/) or my [Sponge ore](https://ore.spongepowered.org/happyzlife).
+I have many public projects, many of them have made thousands of downloads between server owners. You can find them in my [GitHub profile](https://github.com/happyzleaf/) or my [Sponge ore](https://ore.spongepowered.org/happyzlife).
 
 <br>
 # Contact me
