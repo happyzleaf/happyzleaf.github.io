@@ -1,6 +1,6 @@
 /**
  * I managed to translate this script from jQuery to vanilla js thanks to some resources.
- * I tried my best to link to all the sources I used.
+ * I tried my best to link all of them.
  *
  * https://html-online.com/articles/dynamic-scroll-back-top-page-button-javascript/
  **/
