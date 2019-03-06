@@ -6,7 +6,7 @@ url: https://happyzleaf.com
 baseurl: ""
 cover: ""
 
-# google_analytics:
+google_analytics: UA-135650940-1
 twitter_username: happyzlife
 
 markdown: kramdown
