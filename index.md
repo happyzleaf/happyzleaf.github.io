@@ -10,7 +10,7 @@ I started with Java because I wanted to mod minecraft (*level 100 chad here*), b
 After roughly an year I joined the [Pixelmon](https://pixelmonmod.com/) team as a sidemod developer, and I published a few plugins for [Sponge](https://www.spongepowered.org/).
 Fast forward an year later, when the mod was [shut down](https://www.polygon.com/2017/7/14/15972052/pixelmon-minecraft-mod-shutdown) thanks to Nintendo, but I had already *left* the team a few months back.
 
-When **unofficial** continuations of the mod started to spread, part the original team decided to revive the mod, and [Reforged](https://reforged.gg/) was created.
+When **unofficial** continuations of the mod started to spread, part of the original team decided to revive the mod, and [Reforged](https://reforged.gg/) was created.
 A few months later I joined the Reforged team, this time as a main mod dev, and I finally accomplished what I wanted to do when I was an even younger kiddo: developing something that would have been enjoyed by thousands of people.
 The major additions made by me are the [Pokérus](https://pixelmonmod.com/wiki/index.php?title=Pok%C3%A9rus), and the new [PC](https://youtu.be/UODg7nzIRl8).
 
