@@ -6,6 +6,7 @@ group :jekyll_plugins do
 end
 gem 'html-proofer'
 gem 'tzinfo'
+gem 'kramdown-parser-gfm'
 
 # Windows helpers
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
