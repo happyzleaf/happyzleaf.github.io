@@ -16,7 +16,7 @@ The major additions made by me are the [Pokérus](https://pixelmonmod.com/wiki/i
 
 <br>
 # Work
-I worked for a lot of servers through out the years, mainly to pay for my dirty cravings (looking at you, useless Vive).
+I work full time as a Java developer for an italian company, but these were the servers that I worked with during my freelancing period.
 <br>These are the ones that agreed to be my show offs:
  - [LunarRising](https://www.lunarrisingmc.com/)
  - [PokeMayhem](http://www.pokemayhem.com/)
