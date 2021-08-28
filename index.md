@@ -3,7 +3,7 @@ layout: page
 title: Home
 ---
 # About
-Hi! My name is Marco, I'm a 20 year old *man* who enjoys coding in his free time.
+Hi! My name is Marco, I'm a 21 year old *man* who enjoys coding in his free time.
 <br>I grew up eating pizza and playing video games in South Italy, and when I was 16 I decided to properly learn a programming language, and (*god knows how*) I didn't give up after a week.
 I started with Java because I wanted to mod minecraft (*level 100 chad here*), but hey, it turned out to be quite useful!
 
