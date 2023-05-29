@@ -1,0 +1,131 @@
+:root {
+    --color-background-primary: rgb(33, 33, 33);
+    --color-background-secondary: rgb(50, 50, 50);
+
+    --color-primary: #fcfcfc;
+    --color-secondary: #fe2355;
+
+    --color-cube: rgba(254, 35, 85, 0.5);
+}
+
+.unselectable {
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+body {
+    background: var(--color-background-primary);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+}
+
+.logo {
+    position: relative;
+}
+
+.avatar {
+    position: absolute;
+    left: -19px;
+
+    background: url(avatar-background.png);
+    border-radius: 2px;
+    display: inline-block;
+
+    width: 450px;
+    height: 452px;
+    margin: 1rem;
+
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+
+    animation: hoverAvatar 2.4s infinite alternate;
+    animation-timing-function: ease-in-out;
+}
+
+.square {
+    animation: hoverContent .8s infinite alternate;
+    animation-timing-function: ease-in-out;
+}
+
+/* Animations */
+@keyframes hoverAvatar {
+    0% {
+        transform: translatey(-5px)
+    }
+
+    100% {
+        transform: translatey(0px)
+    }
+}
+
+@keyframes hoverContent {
+    0% {
+        transform: translatey(-2.5px)
+    }
+
+    100% {
+        transform: translatey(0px)
+    }
+}
+
+/* Icons */
+.icons {
+    display: flex;
+    padding-top: 1rem;
+
+    flex-direction: row;
+    justify-content: center;
+    place-items: center;
+}
+
+.icons li {
+    position: relative;
+    list-style: none;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.icons li a {
+    position: relative;
+    text-decoration: none;
+    color: var(--color-primary);
+    font-size: 1.5em;
+    z-index: 10;
+    transition: 0.5s;
+}
+
+.icons li a:hover {
+    font-size: 2.5em;
+    text-shadow: -.2rem .2rem 0 #000;
+}
+
+/* Copy to clipboard */
+.copy-alert {
+    position: absolute;
+    bottom: 0;
+    margin: 2rem 0;
+    font-size: 1.7rem;
+    color: var(--color-primary);
+    animation: fadeOut 3s ease-out;
+}
+
+@keyframes fadeOut {
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
