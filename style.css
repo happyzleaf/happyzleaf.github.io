@@ -1,9 +1,11 @@
+/* Utilities */
 :root {
     --color-background-primary: rgb(33, 33, 33);
     --color-background-secondary: rgb(50, 50, 50);
 
-    --color-primary: #fcfcfc;
-    --color-secondary: #fe2355;
+    --color-primary: #FCFCFC;
+    --color-secondary: #FE2355;
+    --color-tertiary: #247BA0;
 
     --color-cube: rgba(254, 35, 85, 0.5);
 }
@@ -17,6 +19,7 @@
     -ms-user-select: none;
 }
 
+/* Main content */
 body {
     background: var(--color-background-primary);
     height: 100vh;
@@ -33,6 +36,8 @@ body {
 .avatar {
     position: absolute;
     left: -19px;
+    top: -10px;
+    z-index: -1;
 
     background: url(avatar-background.png);
     width: 225px;
@@ -52,11 +57,34 @@ body {
     background: url(avatar-foreground.png);
     width: 225px;
     height: 226px;
+
+    animation: hoverContent .8s infinite alternate;
+    animation-timing-function: ease-in-out;
+}
+
+.me {
+    position: absolute;
+    width: 100%;
+    
+    right: -12px;
+    bottom: -20px;
+    font-size: 3rem;
+    
+    color: var(--color-primary);
+    text-align: right;
+    margin: 1rem;
+}
+
+sup {
+    font-size: 1rem;
+    color: var(--color-tertiary);
+    cursor: pointer;
 }
 
 @media (min-width: 900px) {
     .avatar {
         background: url(avatar-upscaled-background.png);
+        top: 0px;
         width: 450px;
         height: 452px;
     }
@@ -66,31 +94,11 @@ body {
         width: 450px;
         height: 452px;
     }
-}
 
-.square {
-    animation: hoverContent .8s infinite alternate;
-    animation-timing-function: ease-in-out;
-}
-
-/* Animations */
-@keyframes hoverAvatar {
-    0% {
-        transform: translatey(-5px)
-    }
-
-    100% {
-        transform: translatey(0px)
-    }
-}
-
-@keyframes hoverContent {
-    0% {
-        transform: translatey(-2.5px)
-    }
-
-    100% {
-        transform: translatey(0px)
+    .me {
+        right: 0px;
+        bottom: -20px;
+        font-size: 2.5rem;
     }
 }
 
@@ -147,5 +155,26 @@ body {
 
     100% {
         opacity: 0;
+    }
+}
+
+/* Animations */
+@keyframes hoverAvatar {
+    0% {
+        transform: translatey(-5px)
+    }
+
+    100% {
+        transform: translatey(0px)
+    }
+}
+
+@keyframes hoverContent {
+    0% {
+        transform: translatey(-2.5px)
+    }
+
+    100% {
+        transform: translatey(0px)
     }
 }
