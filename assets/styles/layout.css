@@ -64,7 +64,7 @@ body {
     bottom: 10px;
 
     color: var(--color-primary);
-    font-size: 2.5rem;
+    font-size: 2.5em;
     text-align: right;
     margin: 0.8rem;
 }
@@ -87,6 +87,10 @@ body {
 
     .square-fallback {
         background: url(/assets/media/avatar-upscaled-foreground.png);
+    }
+
+    .me {
+        font-size: 3.5em;
     }
 
     @keyframes hoverContent {
