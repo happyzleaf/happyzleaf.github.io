@@ -1,16 +1,10 @@
 (function () {
-    const writeToClipboard = async function (text) {
+    let writeToClipboard = async function (text) {
         try {
             await navigator.clipboard.writeText(text);
         } catch (err) {
             console.error('Failed to copy: ', err);
         }
-    };
-
-    const discordIcon = document.querySelector('.fa-discord');
-    discordIcon.addEventListener('click', (e) => {
-        e.preventDefault();
-        writeToClipboard('happyz#6345');
 
         if (document.querySelector('.copy-alert')) {
             return;
@@ -18,24 +12,32 @@
 
         let copyAlert = document.createElement('span');
         copyAlert.classList.add('copy-alert');
-        copyAlert.innerText = `happyz#6345 copied in the clipboard.`;
+        copyAlert.innerText = `${text} copied.`;
         document.body.appendChild(copyAlert);
         setTimeout(() => {
             document.body.removeChild(copyAlert);
         }, 3000);
-    });
+    };
+
+    for (let element of document.querySelectorAll('[data-copy-to-clipboard]')) {
+        let text = element.getAttribute('data-copy-to-clipboard');
+        element.addEventListener('click', (e) => {
+            e.preventDefault();
+            writeToClipboard(text);
+        });
+    }
 
     particlesJS.load('background', 'assets/particles.json');
 
-    const canvas = document.querySelector('canvas');
-    const gl = canvas.getContext('webgl2');
+    let canvas = document.querySelector('canvas');
+    let gl = canvas.getContext('webgl2');
     if (!gl) {
         throw 'WebGL2 not supported.';
     }
 
-    const shaders = {
+    let shaders = {
         vs: `#version 300 es
-            precision mediump float;
+            precision highp float;
             in vec2 position;
 
             void main() {
@@ -44,7 +46,7 @@
         `,
 
         fs: `#version 300 es
-            precision mediump float;
+            precision highp float;
             uniform vec2 u_resolution;
             uniform float u_offset_y;
             uniform float u_time;
@@ -58,24 +60,26 @@
             }
 
             void main() {
-                vec2 relativeCoord = gl_FragCoord.xy / u_resolution.xy;
+                float relX = gl_FragCoord.x / u_resolution.x;
+                float relY = gl_FragCoord.y / u_resolution.y;
 
                 // Shadow
-                if (relativeCoord.x > 0.95 || relativeCoord.y < 0.05) {
-                    if (relativeCoord.x > 0.05 && relativeCoord.y < 0.95) {
+                if (relX > 0.95 || relY < 0.05) {
+                    if (relX > 0.05 && relY < 0.95) {
                         color = vec4(0.0, 0.0, 0.0, 0.75);
                     }
                     return;
                 }
 
-                vec2 absoluteCoord = vec2(gl_FragCoord.x / u_resolution.x, (gl_FragCoord.y - u_offset_y) / u_resolution.y);
+                float x = relX;
+                vec2 coords = vec2(relX, (gl_FragCoord.y - u_offset_y) / u_resolution.y);
 
                 // Waves
                 // ducklett @ Shadertoy (https://www.shadertoy.com/view/WsB3Wc)
                 float s = 4.0; // Number of stripes
                 float st = 0.4; // Stripe thickness
 
-                vec2 uv = rot(absoluteCoord, -0.2 + sin(u_time) * 0.05);
+                vec2 uv = rot(coords, -0.2 + sin(u_time) * 0.05);
                 //vec2 uv = (gl_FragCoord.xy + u_offset.xy) / u_resolution.xy;
                 //vec2 uv = vec2((gl_FragCoord.x + u_offset.x) / u_resolution.x, (gl_FragCoord.y + u_offset.y) / u_resolution.y);
 
@@ -133,8 +137,8 @@
     let u_offset_y = gl.getUniformLocation(program, 'u_offset_y');
     let u_time = gl.getUniformLocation(program, 'u_time');
 
-    const randomStart = Math.random() * 1000;
-    const render = function (time) {
+    let randomStart = Math.random() * 1000;
+    let render = function (time) {
         // time = (time * 0.001) % 10 / 10; // From 0 to 1 every 10 seconds
         time = time * 0.0001;
 
