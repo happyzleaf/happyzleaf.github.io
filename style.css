@@ -34,7 +34,6 @@ body {
 }
 
 .avatar {
-    position: absolute;
     left: -19px;
     top: -10px;
     z-index: -1;
@@ -54,22 +53,29 @@ body {
 }
 
 .square {
-    background: url(avatar-foreground.png);
-    width: 225px;
-    height: 226px;
+    position: absolute;
+
+    left: calc(50% - 49px);
+    top: calc(50% - 45px);
+    width: 98px;
+    height: 90px;
 
     animation: hoverContent .8s infinite alternate;
     animation-timing-function: ease-in-out;
 }
 
+.square-fallback {
+    background: url(avatar-foreground.png);
+}
+
 .me {
     position: absolute;
     width: 100%;
-    
-    right: -12px;
-    bottom: -20px;
+    right: 5px;
+    bottom: 5px;
+
     font-size: 3rem;
-    
+
     color: var(--color-primary);
     text-align: right;
     margin: 1rem;
@@ -79,27 +85,6 @@ sup {
     font-size: 1rem;
     color: var(--color-tertiary);
     cursor: pointer;
-}
-
-@media (min-width: 900px) {
-    .avatar {
-        background: url(avatar-upscaled-background.png);
-        top: 0px;
-        width: 450px;
-        height: 452px;
-    }
-
-    .square {
-        background: url(avatar-upscaled-foreground.png);
-        width: 450px;
-        height: 452px;
-    }
-
-    .me {
-        right: 0px;
-        bottom: -20px;
-        font-size: 2.5rem;
-    }
 }
 
 /* Icons */
@@ -148,6 +133,7 @@ sup {
     animation: fadeOut 3s ease-out;
 }
 
+/* Animations */
 @keyframes fadeOut {
     90% {
         opacity: 1;
@@ -158,7 +144,6 @@ sup {
     }
 }
 
-/* Animations */
 @keyframes hoverAvatar {
     0% {
         transform: translatey(-5px)
@@ -171,10 +156,45 @@ sup {
 
 @keyframes hoverContent {
     0% {
-        transform: translatey(-2.5px)
+        transform: translatey(-5px)
     }
 
     100% {
         transform: translatey(0px)
+    }
+}
+
+/* Desktop */
+@media (min-width: 900px) {
+    .avatar {
+        background: url(avatar-upscaled-background.png);
+        top: 0px;
+        width: 450px;
+        height: 452px;
+    }
+
+    .square {
+        left: calc(50% - 98px);
+        top: calc(50% - 91px);
+        width: 196px;
+        height: 182px;
+    }
+
+    .square-fallback {
+        background: url(avatar-upscaled-foreground.png);
+    }
+
+    .me {
+        font-size: 2.5rem;
+    }
+
+    @keyframes hoverContent {
+        0% {
+            transform: translatey(-10px)
+        }
+    
+        100% {
+            transform: translatey(0px)
+        }
     }
 }
