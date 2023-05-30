@@ -33,7 +33,7 @@ body {
     top: -10px;
     z-index: -1;
 
-    background: url(../media/avatar-background.png);
+    background: url(/assets/media/avatar-background.png);
     width: 225px;
     height: 226px;
 
@@ -54,32 +54,25 @@ body {
 }
 
 .square-fallback {
-    background: url(../media/avatar-foreground.png);
+    background: url(/assets/media/avatar-foreground.png);
 }
 
 .me {
     position: absolute;
     width: 100%;
     right: 5px;
-    bottom: 5px;
-
-    font-size: 3rem;
+    bottom: 10px;
 
     color: var(--color-primary);
+    font-size: 2.5rem;
     text-align: right;
     margin: 0.8rem;
-}
-
-sup {
-    font-size: 1rem;
-    color: var(--color-tertiary);
-    cursor: pointer;
 }
 
 /* Desktop */
 @media (min-width: 900px) {
     .avatar {
-        background: url(../media/avatar-upscaled-background.png);
+        background: url(/assets/media/avatar-upscaled-background.png);
         top: 0px;
         width: 450px;
         height: 452px;
@@ -93,11 +86,7 @@ sup {
     }
 
     .square-fallback {
-        background: url(../media/avatar-upscaled-foreground.png);
-    }
-
-    .me {
-        font-size: 2.5rem;
+        background: url(/assets/media/avatar-upscaled-foreground.png);
     }
 
     @keyframes hoverContent {
@@ -109,4 +98,11 @@ sup {
             transform: translatey(0px)
         }
     }
+}
+
+/* Not needed anymore */
+sup {
+    font-size: 1rem;
+    color: var(--color-tertiary);
+    cursor: pointer;
 }
