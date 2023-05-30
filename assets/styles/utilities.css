@@ -1,0 +1,19 @@
+:root {
+    --color-background-primary: #212121;
+    --color-background-secondary: #323232;
+
+    --color-primary: #FCFCFC;
+    --color-secondary: #FE2355;
+    --color-tertiary: #FFD400;
+
+    --color-cube: rgba(254, 35, 85, 0.5);
+}
+
+.unselectable {
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}

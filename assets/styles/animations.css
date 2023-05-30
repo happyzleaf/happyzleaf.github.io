@@ -1,0 +1,48 @@
+/* Selectors */
+
+.copy-alert {
+    animation: fadeOut 3s ease-out;
+}
+
+.avatar {
+    animation: hoverAvatar 2.4s infinite alternate;
+    animation-timing-function: ease-in-out;
+}
+
+.square {
+    animation: hoverContent .8s infinite alternate;
+    animation-timing-function: ease-in-out;
+}
+
+
+/* Keyframes */
+
+@keyframes fadeOut {
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes hoverAvatar {
+    0% {
+        transform: translatey(-5px)
+    }
+
+    100% {
+        transform: translatey(0px)
+    }
+}
+
+@keyframes hoverContent {
+    0% {
+        transform: translatey(-5px)
+    }
+
+    100% {
+        transform: translatey(0px)
+    }
+}

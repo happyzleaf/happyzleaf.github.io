@@ -1,0 +1,35 @@
+/* Diego Lopes @ CodePen (https://codepen.io/dig-lopes/pen/WLVGda) */
+.icons {
+    display: flex;
+    padding-top: 1rem;
+
+    flex-direction: row;
+    justify-content: center;
+    place-items: center;
+}
+
+.icons li {
+    position: relative;
+    list-style: none;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.icons li a {
+    position: relative;
+    text-decoration: none;
+    color: var(--color-primary);
+    font-size: 1.5em;
+    z-index: 10;
+    transition: 0.5s;
+}
+
+.icons li a:hover {
+    font-size: 2.5em;
+    text-shadow: -.2rem .2rem 0 #000;
+}
