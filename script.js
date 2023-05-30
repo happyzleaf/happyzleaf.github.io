@@ -25,6 +25,8 @@
         }, 3000);
     });
 
+    particlesJS.load('background', 'assets/particles.json');
+
     const canvas = document.querySelector('canvas');
     const gl = canvas.getContext('webgl2');
     if (!gl) {
