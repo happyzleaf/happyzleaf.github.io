@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>https repo to git</title>
+</head>
+
+<body style="height: 100%;">
+    <div
+        style="display: flex; height: 100%; flex-direction: column; justify-content: center; place-items: center; gap: .5rem;">
+        <input id="from" style="width: 60%; box-sizing: border-box;"
+            placeholder="https://github.com/happyzleaf/happyzleaf.github.io" autofocus />
+        <div style="display: flex; width: 60%; justify-content: center; place-items: center; gap: .5rem;">
+            <input id="to" style="flex-grow: 1;" placeholder="git@github.com:happyzleaf/happyzleaf.github.io.git"
+                disabled />
+            <svg id="copy-to-clipboard" fill="#000000" xmlns="http://www.w3.org/2000/svg" width="15px" height="15px"
+                viewBox="0 0 52 52" enable-background="new 0 0 52 52" xml:space="preserve">
+                <g>
+                    <path d="M17.4,11.6h17.3c0.9,0,1.6-0.7,1.6-1.6V6.8c0-2.6-2.1-4.8-4.7-4.8h-11c-2.6,0-4.7,2.2-4.7,4.8V10
+		C15.8,10.9,16.5,11.6,17.4,11.6z" />
+                    <path
+                        d="M43.3,6h-1.6c-0.5,0-0.8,0.3-0.8,0.8V10c0,3.5-2.8,6.4-6.3,6.4H17.4c-3.5,0-6.3-2.9-6.3-6.4V6.8
+		c0-0.5-0.3-0.8-0.8-0.8H8.7C6.1,6,4,8.2,4,10.8v34.4C4,47.8,6.1,50,8.7,50h34.6c2.6,0,4.7-2.2,4.7-4.8V10.8C48,8.2,45.9,6,43.3,6z" />
+                </g>
+            </svg>
+        </div>
+    </div>
+
+    <script>
+        const regex = /http[s]?:\/\/((?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z0-9][a-z0-9-]{0,61}[a-z0-9])\/([a-z0-9.-_]*\/?)*/i;
+
+        let fromInput = document.getElementById('from');
+        let toInput = document.getElementById('to');
+
+        let lastValue;
+        let convert = function () {
+            if (lastValue == fromInput.value) {
+                return;
+            }
+
+            lastValue = fromInput.value;
+            let values = regex.exec(lastValue);
+            if (!values || values.length != 3) {
+                return;
+            }
+
+            let [_, domain, path] = values;
+            if (!domain || !path) {
+                return;
+            }
+
+            toInput.value = `git@${domain}:${path}.git`;
+        };
+
+        fromInput.addEventListener('change', convert);
+        fromInput.addEventListener('keydown', convert);
+        fromInput.addEventListener('paste', convert);
+        fromInput.addEventListener('input', convert);
+
+        let copyToClipboard = document.getElementById('copy-to-clipboard');
+        copyToClipboard.addEventListener('click', async () => {
+            if (!toInput || !toInput.value) {
+                return;
+            }
+
+            try {
+                await navigator.clipboard.writeText(toInput.value);
+            } catch (err) {
+                console.error('Failed to copy: ', err);
+            }
+        });
+    </script>
+</body>
+
+</html>
